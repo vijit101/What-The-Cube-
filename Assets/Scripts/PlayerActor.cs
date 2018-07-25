@@ -3,10 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerActor : MonoBehaviour {
+    // works when the istrigger is off 
+
+    
     Rigidbody rgbd;
+    Renderer render;
+    [SerializeField] Material[] mat;
     private void Awake()
     {
         rgbd = GetComponent<Rigidbody>();
+        render = GetComponent<Renderer>();
+        render.enabled = true;
+
     }
     // Use this for initialization
     void Start () {
@@ -22,6 +30,7 @@ public class PlayerActor : MonoBehaviour {
         moveleft();
         moveright();
         jump();
+        colortagchange();
     }
     public void moveleft()
     {
@@ -42,6 +51,30 @@ public class PlayerActor : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rgbd.AddForce(new Vector3(0,10,0),ForceMode.Impulse);
+        }
+    }
+    
+    public void colortagchange()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            render.material = mat[0];
+            tag = "Pink";
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            render.material = mat[1];
+            tag = "Red";
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            render.material = mat[2];
+            tag = "Green";
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            render.material = mat[3];
+            tag = "Blue";
         }
     }
 }

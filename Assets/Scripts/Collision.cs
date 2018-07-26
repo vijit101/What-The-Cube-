@@ -15,8 +15,8 @@ public class Collision : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-		
-	}
+        gmo.AddComponent<DetectOntrigger>();
+    }
 	
 	// Update is called once per frame
 	void Update () {

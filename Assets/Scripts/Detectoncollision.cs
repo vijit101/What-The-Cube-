@@ -3,17 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Detectoncollision : MonoBehaviour {
-    private void OnCollisionEnter(Collision col)
+    private void OnCollisionEnter(UnityEngine.Collision coll)
     {
-
-        if (col.tag != tag && tag != "safezone")
+        if ((coll.gameObject.tag != tag) && (coll.gameObject.tag != "safezone"))
         {
             Utils.reloadcurrentscene();
         }
-        if (col.tag == "Endpad")
+        if (coll.gameObject.tag == "Endpad")
         {
             Utils.loadnextscene();
         }
     }
-   
 }

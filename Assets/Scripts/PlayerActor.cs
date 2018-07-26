@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerActor : MonoBehaviour {
-    // works when the istrigger is off 
 
-    
+  
+    // works when the istrigger is off 
     Rigidbody rgbd;
     Renderer render;
     [SerializeField] Material[] mat;

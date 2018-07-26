@@ -297,7 +297,8 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114022892917578310, guid: 30c60b90d3cd0ac49906d60282372f36, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 30c60b90d3cd0ac49906d60282372f36, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &282840810
@@ -427,7 +428,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1654927661714962, guid: 30c60b90d3cd0ac49906d60282372f36, type: 2}
       propertyPath: m_Name
-      value: Safezone (1)
+      value: Obstacle1
       objectReference: {fileID: 0}
     - target: {fileID: 65279749785645922, guid: 30c60b90d3cd0ac49906d60282372f36,
         type: 2}
@@ -453,7 +454,8 @@ Prefab:
       propertyPath: gmo1
       value: 
       objectReference: {fileID: 897571623}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114022892917578310, guid: 30c60b90d3cd0ac49906d60282372f36, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 30c60b90d3cd0ac49906d60282372f36, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &771045313
@@ -668,6 +670,19 @@ GameObject:
   m_PrefabParentObject: {fileID: 1654927661714962, guid: 30c60b90d3cd0ac49906d60282372f36,
     type: 2}
   m_PrefabInternal: {fileID: 472151169}
+--- !u!114 &1722958688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1722958687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aec01b7eb950e14b9c0682b00067c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gmo: {fileID: 1722958687}
+  gmo1: {fileID: 897571623}
 --- !u!1001 &1862839962
 Prefab:
   m_ObjectHideFlags: 0

@@ -4,7 +4,21 @@ using UnityEngine;
 
 public class PlayerActor : MonoBehaviour {
 
-  
+    private void OnCollisionEnter(UnityEngine.Collision collision)
+    {
+        if (collision.gameObject.tag == "Endpad")
+        {
+            Utils.loadnextscene();
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Endpad")
+        {
+            Utils.loadnextscene();
+
+        }
+    }
     // works when the istrigger is off 
     Rigidbody rgbd;
     Renderer render;

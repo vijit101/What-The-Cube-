@@ -9,6 +9,7 @@ TagManager:
   - Blue
   - Red
   - Green
+  - Endpad
   layers:
   - Default
   - TransparentFX

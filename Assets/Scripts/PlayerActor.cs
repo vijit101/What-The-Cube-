@@ -23,6 +23,7 @@ public class PlayerActor : MonoBehaviour {
     Rigidbody rgbd;
     Renderer render;
     [SerializeField] Material[] mat;
+    [SerializeField] float maxdrg = 4.5f;
     private void Awake()
     {
         rgbd = GetComponent<Rigidbody>();
@@ -45,6 +46,7 @@ public class PlayerActor : MonoBehaviour {
         moveright();
         jump();
         colortagchange();
+        dragcoontroller();
     }
     public void moveleft()
     {
@@ -90,5 +92,28 @@ public class PlayerActor : MonoBehaviour {
             render.material = mat[3];
             tag = "Blue";
         }
+
+    }
+    public void dragcoontroller()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (rgbd.drag > maxdrg)
+            {
+                rgbd.drag = maxdrg;
+            }
+            else
+            {
+                rgbd.drag += .5f;
+            }
+
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            rgbd.drag -= .5f;
+
+        }
+
     }
 }
+
